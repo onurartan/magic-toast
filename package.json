@@ -1,0 +1,67 @@
+{
+  "name": "@trymagic/toast",
+  "version": "0.1.29",
+  "description": "Magic Toast is a cool library",
+  "private": false,
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdx build",
+    "build:tsup": "tsup src/index.ts",
+    "build-css": "tailwindcss build src/main.css -o dist/main.css --minify",
+    "build-css:src": "tailwindcss build src/main.css -o src/global.css --minify",
+    "build-css:dist": "tailwindcss build src/main.css -o dist/global.css --minify",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "keywords": [
+    "react",
+    "notifications",
+    "toast",
+    "snackbar",
+    "message"
+  ],
+  "author": "trymagic",
+  "license": "MIT",
+  "homepage": "https://toast.trymagic.xyz/",
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.9.0",
+    "@storybook/addon-essentials": "^8.3.5",
+    "@storybook/addon-interactions": "^8.3.5",
+    "@storybook/addon-links": "^8.3.5",
+    "@storybook/addon-onboarding": "^8.3.5",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
+    "@storybook/blocks": "^8.3.5",
+    "@storybook/react": "^8.3.5",
+    "@storybook/react-webpack5": "^8.3.5",
+    "@storybook/test": "^8.3.5",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "rollup-plugin-postcss": "^4.0.2",
+    "storybook": "^8.3.5",
+    "tailwindcss": "^3.4.13",
+    "tsdx": "^0.14.1",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.3"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "dependencies": {
+    "@trymagic/magic-input": "^0.0.111",
+    "framer-motion": "^11.11.7",
+    "magic-toast": "^0.0.17",
+    "react-spinners": "^0.14.1"
+  }
+}

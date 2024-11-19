@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:where([data-magic-toast-toaster]) {
+  width: 400px;
+}
+
+[data-magic-toast-toaster] [data-magic-toast-toast] {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  [data-magic-toast-toaster] [data-magic-toast-toast] {
+    width: calc(100% - var(--mobile-offset) * 2);
+  }
+}

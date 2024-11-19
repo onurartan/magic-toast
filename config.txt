@@ -1,0 +1,16 @@
+[package.json]
+// ----------- TSDX CONFIG ----------- //
+"exports": {
+    "./package.json": "./package.json",
+    "./global.css": "./dist/global.css",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/toast.esm.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/toast.esm.js",
+
+// ----------- TSUP CONFIG ----------- // 

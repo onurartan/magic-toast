@@ -1,0 +1,1 @@
+export const screenWidth = typeof window !== 'undefined' ? window.innerWidth : 605;
