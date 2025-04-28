@@ -5,12 +5,12 @@ let screenWidth = window.innerWidth;
 export const usw = () => {
   function updateScreenWidth() {
     screenWidth = window.innerWidth;
-   print.info("Screen width updated:" + screenWidth, {
-    options: {
-        showTimestamp: true,
-        showType: true
-    }
-   });
+  //  print.info("Screen width updated:" + screenWidth, {
+  //   options: {
+  //       showTimestamp: true,
+  //       showType: true
+  //   }
+  //  });
   }
 
   if (typeof window !== "undefined") {

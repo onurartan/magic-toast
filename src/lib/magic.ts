@@ -1,15 +1,15 @@
 import { ToastType } from "@/types";
-import { MagicItem } from "@trymagic/magic-input/types/types/index";
+import type { MagicItem } from "@trymagic/magic-input";
 
 export const Magic = (type: ToastType | "default" = "success") => {
   const spanColor =
     type == "success"
-      ? "text-green-500"
+      ? "toast_theme-text-green-500"
       : type == "error"
-      ? "text-red-500"
+      ? "toast_theme-text-red-500"
       : type == "info"
-      ? "text-blue-500"
-      : "text-purple-500";
+      ? "toast_theme-text-blue-500"
+      : "toast_theme-text-purple-500";
 
   const magic: MagicItem[] = [
     {
@@ -28,7 +28,7 @@ export const Magic = (type: ToastType | "default" = "success") => {
                     .map((p) => p.trim())
                 )
                 .flat();
-
+  
               return `<span class="${spanColor}">${formattedParameters[0]}</span>`;
             }
             return "regex_not_matched";
@@ -37,7 +37,7 @@ export const Magic = (type: ToastType | "default" = "success") => {
           parameters: true,
           dynamicFunc: true,
         },
-      ],
+      ]
     },
   ];
   return magic;

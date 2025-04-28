@@ -21,7 +21,7 @@ import {
 import { toastStyle } from "../../lib/style";
 
 /* Types */
-import { ToastProps } from "../../types";
+import { Theme, ToastProps } from "../../types";
 import { closeButtonProps } from "../../lib/closeButton";
 import { print } from "../../utils/dev/print";
 import { Icons } from "../../constants/icons";
@@ -60,7 +60,7 @@ const ToastLink: React.FC<LinkToastProps> = ({
 
   return (
     <motion.div
-      className="w-full flex items-center justify-center toastLink hover:scale-110 "
+      className="toast_theme-w-full toast_theme-flex toast_theme-items-center toast_theme-justify-center toast_theme-toastLink hover:toast_theme-scale-110 "
       initial={{ scale: 0.9, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       whileHover={{ scale: 1.05 }}
@@ -69,10 +69,10 @@ const ToastLink: React.FC<LinkToastProps> = ({
       transition={{ type: "spring", stiffness: 200, damping: 20 }}
     >
       <motion.div
-        className={`flex relative items-center ${
-          appliedTheme === "dark" ? "bg-[#282828]" : "bg-white"
-        } px-3 gap-2 py-2.5 w-full max-w-[${width}] border ${
-          appliedTheme === "dark" ? "border-[#3f3f3f]" : "border-[#e2e2e2]"
+        className={`toast_theme-flex toast_theme-relative toast_theme-items-center ${
+          appliedTheme === "dark" ? "toast_theme-bg-[#282828]" : "toast_theme-bg-white"
+        } toast_theme-px-3 toast_theme-gap-2 toast_theme-py-2.5 toast_theme-w-full toast_theme-max-w-[${width}] toast_theme-border ${
+          appliedTheme === "dark" ? "toast_theme-border-[#3f3f3f]" : "toast_theme-border-[#e2e2e2]"
         } shadow-lg ${className}`}
         style={toastStyle(round, style, width)}
         initial={{ scale: 0.8, opacity: 0 }}
@@ -82,7 +82,7 @@ const ToastLink: React.FC<LinkToastProps> = ({
         {icon ? (
           <>
             {typeof icon === "string" ? (
-              <span className="select-none pointer-events-none">{icon}</span>
+              <span className="toast_theme-select-none toast_theme-pointer-events-none">{icon}</span>
             ) : (
               icon
             )}
@@ -99,13 +99,13 @@ const ToastLink: React.FC<LinkToastProps> = ({
           ""
         )}
 
-        <div className="flex items-start w-full">
-          <a  href={href} className="flex flex-col items-start w-full">
+        <div className="toast_theme-flex toast_theme-items-start toast_theme-w-full">
+          <a  href={href} className="toast_theme-flex toast_theme-flex-col toast_theme-items-start toast_theme-w-full">
             {typeof message === "string" ? (
               <h1
-                className={`font-medium ${
-                  appliedTheme === "dark" ? "text-white" : "text-black"
-                } text-[15px] w-full `}
+                className={`toast_theme-font-medium ${
+                  appliedTheme === "dark" ? "toast_theme-text-white" : "toast_theme-text-black"
+                } toast_theme-text-[15px] toast_theme-w-full `}
               >
                 {message}
               </h1>
@@ -118,8 +118,8 @@ const ToastLink: React.FC<LinkToastProps> = ({
           <div
             className={
               action?.position === "bottom"
-                ? "flex flex-col items-end justify-end gap-2"
-                : "flex items-center justify-center gap-2"
+                ? "toast_theme-flex toast_theme-flex-col toast_theme-items-end toast_theme-justify-end toast_theme-gap-2"
+                : "toast_theme-flex toast_theme-items-center toast_theme-justify-center toast_theme-gap-2"
             }
           >
             {action && action.position !== "bottom" && (
@@ -129,7 +129,7 @@ const ToastLink: React.FC<LinkToastProps> = ({
               <CloseButtonBeta
                 t={t}
                 closeButtonStyle={closeButtonProps(
-                  appliedTheme!,
+                  appliedTheme as Theme | "theme_provider_not_used",
                   closeButtonStyle
                 )}
               />

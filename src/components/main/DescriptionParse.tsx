@@ -11,7 +11,7 @@ const DescriptionParse = ({
   type: ToastType | "default";
 }) => {
   const executeMagic = useMagic(Magic(type), description || "");
-  const emagic = executeMagic();
+  const emagic = executeMagic;
 
   const {
     value,
@@ -25,11 +25,11 @@ const DescriptionParse = ({
     <>
       {regexMatched ? (
         <p
-          className="text-[#848484] text-[14px] w-full"
+          className="toast_theme-text-[#848484] toast_theme-text-[14px] toast_theme-w-full"
           dangerouslySetInnerHTML={{ __html: result! }}
         />
       ) : (
-        <p className="text-[#848484] text-[14px] w-full">{description}</p>
+        <p className="toast_theme-text-[#848484] toast_theme-text-[14px] toast_theme-w-full">{description}</p>
       )}
     </>
   );

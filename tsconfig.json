@@ -3,6 +3,7 @@
   "include": ["src", "types"],
   "compilerOptions": {
     "module": "esnext",
+    "checkJs":false,
     "lib": ["dom", "esnext"],
     "baseUrl": ".",
     "paths": {

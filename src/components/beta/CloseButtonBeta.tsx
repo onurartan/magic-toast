@@ -12,7 +12,7 @@ const CloseButtonBeta = ({
   return (
     <button
       onClick={() => toast.dismiss(t)}
-      className={`bg-[${closeButtonStyle.bgColor}] active:scale-95 w-6 h-6 rounded-lg flex items-center justify-center hover:bg-[${closeButtonStyle.hoverBgColor}] transition-all`}
+      className={` active:toast_theme-scale-95 toast_theme-w-6 toast_theme-h-6 toast_theme-rounded-lg toast_theme-flex toast_theme-items-center toast_theme-border-none toast_theme-outline-none toast_theme-justify-center hover:toast_theme-bg-[${closeButtonStyle.hoverBgColor}] toast_theme-transition-all`}
       style={{
         backgroundColor: closeButtonStyle.bgColor,
       }}

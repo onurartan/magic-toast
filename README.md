@@ -1,5 +1,7 @@
 [Magic Toast](https://toast.trymagic.xyz/) is an opinionated toast component for React. You can read more about why and how it was built [here](trymagic.xyz/blog/magic-toast-use).
 
+> we recommend using the latest and stabile version 0.1.9
+
 ## Usage
 
 To start using the library, install it in your project:

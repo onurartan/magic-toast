@@ -6,7 +6,7 @@ export const Icons = {
   Success: () => {
     return (
       <motion.div
-        className="min-w-5 min-h-5 rounded-full bg-green-500 flex items-center justify-center"
+        className="toast_theme-min-w-5 toast_theme-min-h-5 toast_theme-rounded-full toast_theme-bg-green-500 toast_theme-flex toast_theme-items-center toast_theme-justify-center"
         initial={{ scale: 1 }}
         animate={{ scale: [1, 1.2, 1], opacity: [0.8, 1] }}
         transition={{
@@ -39,7 +39,7 @@ export const Icons = {
   Error: () => {
     return (
       <motion.div
-        className="min-w-5 min-h-5 rounded-full bg-red-500 flex items-center justify-center"
+        className="toast_theme-min-w-5 toast_theme-min-h-5 toast_theme-rounded-full toast_theme-bg-red-500 toast_theme-flex toast_theme-items-center toast_theme-justify-center"
         initial={{ rotate: 0 }}
         animate={{
           rotate: [0, -15, 15, -15, 15, 0],
@@ -71,7 +71,7 @@ export const Icons = {
   Info: () => {
     return (
       <motion.div
-        className="min-w-5 min-h-5 rounded-full bg-blue-500 flex items-center justify-center"
+        className="toast_theme-min-w-5 toast_theme-min-h-5 toast_theme-rounded-full toast_theme-bg-blue-500 toast_theme-flex toast_theme-items-center toast_theme-justify-center"
         initial={{ scale: 1 }}
         animate={{ scale: [1, 1.2, 1], opacity: [0.95, 1] }}
         transition={{
@@ -107,7 +107,7 @@ export const Icons = {
   Loading: () => {
     return (
       <motion.div
-        className="w-6 h-6 relative flex items-center  justify-center  rounded-lg py-1 px-2"
+        className="toast_theme-w-6 toast_theme-h-6 toast_theme-relative toast_theme-flex toast_theme-items-center  toast_theme-justify-center  toast_theme-rounded-lg toast_theme-py-1 toast_theme-px-2"
         // initial={{ scale: 1 }}
         // animate={{ scale: [1, 1.2, 1], opacity: [0.8, 1] }}
         // transition={{

@@ -23,13 +23,12 @@ export type closeButtonStyleProps = {
 export type actionProps = {
   text: string | React.ReactNode;
   onClick?: () => void;
-  href?: string
+  href?: string;
   className?: string;
   style?: React.CSSProperties;
-  type?: "button" | "anchor"
+  type?: "button" | "anchor";
   position?: "left" | "bottom";
 };
-
 
 export type SubToastProps = {
   icon?: string | React.ReactNode;
@@ -49,7 +48,7 @@ export interface NotificationProps {
   closeButtonStyle?: closeButtonStyleProps;
   style?: React.CSSProperties;
   action?: actionProps;
-  theme?: "dark" | "light"
+  theme?: "dark" | "light";
 }
 
 export interface ToastProps extends NotificationProps {
@@ -74,4 +73,5 @@ export interface PromiseNotificationOptions {
   loadingProps?: SubToastProps;
   successProps?: SubToastProps;
   errorProps?: SubToastProps;
+  theme?: "dark" | "light";
 }

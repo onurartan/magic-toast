@@ -7,12 +7,13 @@ import { toast } from "magic-toast";
 const createToast = (
   message: string | React.ReactNode,
   options: NotificationProps,
-  toastType: ToastType | "default" = "default"
+  toastType: ToastType | "default" = "default",
+  theme?: "dark" | "light"
 ): number | string => {
   const { duration, position } = options;
 
   const toastId = toast.custom(
-    (t) => <Toast toastType={toastType === "promise" ? "loading" : toastType} message={message} {...options} t={t} />,
+    (t) => <Toast theme={theme} toastType={toastType === "promise" ? "loading" : toastType} message={message} {...options} t={t} />,
     {
       position,
       duration: toastType !== "promise"  ? duration : Infinity,

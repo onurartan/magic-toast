@@ -1,6 +1,6 @@
 {
   "name": "@trymagic/toast",
-  "version": "0.1.29",
+  "version": "0.1.9",
   "description": "Magic Toast is a cool library",
   "private": false,
   "exports": {
@@ -14,10 +14,10 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsdx build",
-    "build:tsup": "tsup src/index.ts",
+    "build:old": "tsdx build",
+    "build": "tsup src/index.ts",
     "build-css": "tailwindcss build src/main.css -o dist/main.css --minify",
-    "build-css:src": "tailwindcss build src/main.css -o src/global.css --minify",
+    "build-css:src": "tailwindcss build -i src/main.css -o src/global.css --minify",
     "build-css:dist": "tailwindcss build src/main.css -o dist/global.css --minify",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -59,9 +59,9 @@
     "react-dom": "^18.3.1"
   },
   "dependencies": {
-    "@trymagic/magic-input": "^0.0.111",
+    "@trymagic/magic-input": "^0.0.150",
     "framer-motion": "^11.11.7",
-    "magic-toast": "^0.0.17",
+    "magic-toast": "^0.0.32",
     "react-spinners": "^0.14.1"
   }
 }
